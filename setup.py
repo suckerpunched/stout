@@ -1,11 +1,11 @@
-import setuptools
+from setuptools import setup, find_namespace_packages
 
 # with open("README.md", "r", encoding="utf-8") as fh:
 #     long_description = fh.read()
 
-setuptools.setup(
+setup(
     name='stout',
-    version='0.0.1',
+    version='0.0.2',
     author='suckerpunched',
     author_email='',
     description='',
@@ -16,7 +16,7 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/suckerpunched/stout/issues"
     },
     license='MIT',
-    packages=['stout'],
+    packages=find_namespace_packages(include=['stout.*']),
     install_requires=[],
 )
 

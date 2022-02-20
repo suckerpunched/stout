@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='stout',
-    version='0.0.2',
+    version='0.0.3',
     author='suckerpunched',
     author_email='',
     description='',

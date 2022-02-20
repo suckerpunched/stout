@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='stout',
-    version='0.0.6',
+    version='0.0.7',
     author='suckerpunched',
     author_email='',
     description='',
@@ -17,6 +17,12 @@ setup(
     },
     license='MIT',
     packages=find_packages(),
-    install_requires=[],
+    install_requires=['click'],
+
+    package_data={'': ['dockerfile']},
+
+    entry_points = {
+        'console_scripts': ['stout=stout.command_line:main'],
+    }
 )
 

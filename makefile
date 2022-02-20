@@ -12,3 +12,7 @@ build:
 
 deploy: 
 	twine upload dist/*
+
+i: clean build
+	python3 -m pip uninstall stout -y
+	python3 -m pip install dist/stout-$(v).tar.gz

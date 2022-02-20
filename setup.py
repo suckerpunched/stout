@@ -1,11 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # with open("README.md", "r", encoding="utf-8") as fh:
 #     long_description = fh.read()
 
 setup(
     name='stout',
-    version='0.0.3',
+    version='0.0.4',
     author='suckerpunched',
     author_email='',
     description='',
@@ -16,7 +16,7 @@ setup(
         "Bug Tracker": "https://github.com/suckerpunched/stout/issues"
     },
     license='MIT',
-    packages=['stout'],
+    packages=find_packages(),
     install_requires=[],
 )
 

@@ -6,8 +6,8 @@ RUN python3 -m pip install --upgrade pip
 WORKDIR /app
 COPY . .
 
-RUN python3 -m pip install -r requirements.txt
+RUN  if test -e requirements.txt; then pip install -r requirements.txt; fi
 
 ARG SCRIPT
 
-CMD python3 ${SCRIPT}.py
+CMD python3 ${SCRIPT}

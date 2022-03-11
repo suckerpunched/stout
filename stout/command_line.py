@@ -1,7 +1,6 @@
 from click import command, argument, option, echo
 from stout.docker import context as docker_context, build as docker_build, run as docker_run
-
-from json import loads as json_loads
+from os.path import exists
 
 @command()
 @argument('script')
@@ -16,8 +15,8 @@ def run_script(script, verbose):
                     echo(chunk['stream'].strip('\n'))
 
     output = docker_run(ctx, script)
-
-    print(output)
+    
+    print(output.decode())
 
 def main():
     run_script()
